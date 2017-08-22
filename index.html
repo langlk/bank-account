@@ -10,6 +10,7 @@
   </head>
   <body>
     <div class="container">
+      <h2>Create Account</h3>
       <form id="new-account">
         <div class="form-group">
           <label for="account-name">Name:</label>
@@ -22,7 +23,12 @@
 
         <button type="submit" class="btn">Enter</button>
       </form>
+      <h3>Deposit or Withdraw Funds</h3>
       <form id="change-funds">
+        <div class="form-group">
+          <label for="account">Name:</label>
+          <input type="text" id="account" class="form-control">
+        </div>
         <div class="form-group">
           <label for="deposit-amount">Deposit Amount</label>
           <input type="number" id="deposit-amount" class="form-control">
@@ -34,8 +40,13 @@
 
         <button type="submit" class="btn">Enter</button>
       </form>
-      <div class="balance">
-        
+      <div class="results">
+        <p>
+          Account Name: <span class="name"></span>
+        </p>
+        <p>
+          Balance: $<span class="balance"></span>
+        </p>
       </div>
     </div>
   </body>
