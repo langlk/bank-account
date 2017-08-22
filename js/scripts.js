@@ -24,9 +24,9 @@ $(document).ready(function() {
     event.preventDefault();
     var accountName = $("input#account-name").val();
     var initialAmount = parseInt($("input#initial-amount").val());
-
     newAccount = new Account(accountName, initialAmount);
     accounts[accountName] = newAccount;
+
     $(".name").text(accountName);
     $(".balance").text(newAccount.balance);
     $(".results").show();
@@ -44,6 +44,7 @@ $(document).ready(function() {
     if (withdrawalAmount) {
       accounts[accountName].withdraw(withdrawalAmount);
     }
+    
     $(".name").text(accountName);
     $(".balance").text(accounts[accountName].balance);
     clearForm();

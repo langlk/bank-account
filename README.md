@@ -11,3 +11,7 @@ Specifications:
 * Withdraw funds.
   * Example input: $100
   * Example output: $450
+
+* Store multiple accounts.
+  * Example input: Tim, $400; Bob, $200
+  * Example output: Tim, $400; Bob, $200
