@@ -8,6 +8,10 @@ Account.prototype.deposit = function(funds) {
   this.balance += funds;
 }
 
+Account.prototype.withdraw = function(funds) {
+  this.balance -= funds;
+}
+
 var newAccount;
 // UI Logic
 $(document).ready(function() {
@@ -23,7 +27,13 @@ $(document).ready(function() {
   $("form#change-funds").submit(function(event) {
     event.preventDefault();
     var depositAmount = parseInt($("input#deposit-amount").val());
-    newAccount.deposit(depositAmount);
+    var withdrawalAmount = parseInt($("input#withdrawal-amount").val());
+    if (depositAmount) {
+      newAccount.deposit(depositAmount);
+    }
+    if (withdrawalAmount) {
+      newAccount.withdraw(withdrawalAmount);
+    }
     console.log(newAccount.balance);
   });
 });
