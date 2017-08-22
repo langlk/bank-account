@@ -14,6 +14,10 @@ Account.prototype.withdraw = function(funds) {
 
 var newAccount;
 // UI Logic
+function clearForm() {
+  $("input").val("");
+}
+
 $(document).ready(function() {
   $("form#new-account").submit(function(event) {
     event.preventDefault();
@@ -22,6 +26,7 @@ $(document).ready(function() {
 
     newAccount = new Account(accountName, initialAmount);
     console.log(newAccount);
+    clearForm();
   });
 
   $("form#change-funds").submit(function(event) {
@@ -35,5 +40,6 @@ $(document).ready(function() {
       newAccount.withdraw(withdrawalAmount);
     }
     console.log(newAccount.balance);
+    clearForm();
   });
 });
